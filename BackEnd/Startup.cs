@@ -25,7 +25,7 @@ using Microsoft.Extensions.Logging;
 // dotnet restore
 
 // Testamos a instalação do EntityFrameWork
-// dotnet ef
+// dotnet-ef
 
 // Codigo que criara o nosso Contexto(Contexto da conexão) da Base de Dados e nossos Models
 // -o (Cria o Diretorio) || -d (Datanotation nas composiçoes(Tamanhos, tipos, variaveis locais do Banco de Dados))

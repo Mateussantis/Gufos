@@ -6,7 +6,7 @@ insert into Localizacao(cnpj,razao_social, endereco ) values ('1234567', 'Escola
 
 insert into Categoria(titulo) values ('C#');
 
-insert into Evento(titulo, categoria_id, acesso_livro, data_evento, localizacao_id) values ('Estrutura Semantica', 1, 1, GETDATE(), 1);
+insert into Evento(titulo, categoria_id, acesso_livro, data_evento, localizacao_id) values ('Logica', 3, 1, GETDATE(), 15);
 
 select * from Evento;
 
