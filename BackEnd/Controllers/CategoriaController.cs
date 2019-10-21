@@ -15,6 +15,10 @@ namespace BackEnd.Controllers
         GufosContext _contexto = new GufosContext();
 
         // GET: api/Categoria
+        /// <summary>
+        ///  Retorna a lista de Categorias
+        /// </summary>
+        /// <returns>Lista de obj</returns>
         [HttpGet]
         public async Task<ActionResult<List<Categoria>>> Get(){
             // ToListAsync (Select * from Categoria)
@@ -27,6 +31,11 @@ namespace BackEnd.Controllers
         }
 
         // GET: api/Categoria2
+        /// <summary>
+        /// retorna o objeto pesquisado pelo id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Objeto especifico</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Categoria>> Get(int id){
 
@@ -40,6 +49,11 @@ namespace BackEnd.Controllers
         }
 
         // Post api/categoria
+        /// <summary>
+        /// Cria uma Categoria
+        /// </summary>
+        /// <param name="categoria"></param>
+        /// <returns><Categoria especifica pelo id/returns>
         [HttpPost]
         public async Task<ActionResult<Categoria>> Post(Categoria categoria) {
 
@@ -56,6 +70,12 @@ namespace BackEnd.Controllers
         }
 
         // Put api/categoria
+        /// <summary>
+        /// Atualiza objeto pelo id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="categoria"></param>
+        /// <returns>Categoria atualizada</returns>
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, Categoria categoria){
 

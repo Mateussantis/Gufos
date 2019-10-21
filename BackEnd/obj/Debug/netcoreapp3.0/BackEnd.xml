@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BackEnd</name>
+    </assembly>
+    <members>
+        <member name="M:BackEnd.Controllers.EventoController.Get">
+            <summary>
+            Listar todos os eventos
+            </summary>
+            <returns>Os objetos</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.EventoController.Get(System.Int32)">
+            <summary>
+            Mostra um objeto selecionado pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Objeto</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.EventoController.Post(BackEnd.Evento)">
+            <summary>
+            Cria um novo evetno/
+            </summary>
+            <param name="evento"></param>
+            <returns>Objeto criado</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.EventoController.Put(System.Int32,BackEnd.Evento)">
+            <summary>
+            Atualiza um evento
+            </summary>
+            <param name="id"></param>
+            <param name="evento"></param>
+            <returns>Nada</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.EventoController.Delete(System.Int32)">
+            <summary>
+            Deleta um objeto pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Objeto deletado</returns>
+        </member>
+    </members>
+</doc>

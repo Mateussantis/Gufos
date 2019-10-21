@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Gufos\\BackEnd\\BackEnd.csproj": {}
+    "C:\\Users\\fic\\Desktop\\Gufos\\BackEnd\\BackEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Gufos\\BackEnd\\BackEnd.csproj": {
+    "C:\\Users\\fic\\Desktop\\Gufos\\BackEnd\\BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Gufos\\BackEnd\\BackEnd.csproj",
+        "projectUniqueName": "C:\\Users\\fic\\Desktop\\Gufos\\BackEnd\\BackEnd.csproj",
         "projectName": "BackEnd",
-        "projectPath": "C:\\Users\\user\\Desktop\\Gufos\\BackEnd\\BackEnd.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Gufos\\BackEnd\\obj\\",
+        "projectPath": "C:\\Users\\fic\\Desktop\\Gufos\\BackEnd\\BackEnd.csproj",
+        "packagesPath": "C:\\Users\\fic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fic\\Desktop\\Gufos\\BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\fic\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -39,6 +39,10 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.0.0, )"
@@ -52,6 +56,10 @@
             "Microsoft.EntityFrameWorkCore.SqlServer": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0-rc4, )"
             }
           },
           "imports": [

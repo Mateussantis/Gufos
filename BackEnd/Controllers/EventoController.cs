@@ -17,8 +17,13 @@ namespace BackEnd.Controllers
     {
         
         GufosContext _contexto = new GufosContext();
+        
 
         // GET: api/Evento
+        /// <summary>
+        /// Listar todos os eventos
+        /// </summary>
+        /// <returns>Os objetos</returns>
         [HttpGet]
         public async Task<ActionResult<List<Evento>>> Get(){
             // Include - Adiciona a arvore de objetos relacionados
@@ -31,6 +36,11 @@ namespace BackEnd.Controllers
         }
 
         // GET: api/Evento2
+        /// <summary>
+        /// Mostra um objeto selecionado pelo id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Objeto</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Evento>> Get(int id){
 
@@ -44,6 +54,11 @@ namespace BackEnd.Controllers
         }
 
         // Post api/evento
+        /// <summary>
+        /// Cria um novo evetno/
+        /// </summary>
+        /// <param name="evento"></param>
+        /// <returns>Objeto criado</returns>
         [HttpPost]
         public async Task<ActionResult<Evento>> Post(Evento evento) {
 
@@ -60,6 +75,12 @@ namespace BackEnd.Controllers
         }
 
         // Put api/evento
+        /// <summary>
+        /// Atualiza um evento
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="evento"></param>
+        /// <returns>Nada</returns>
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, Evento evento){
 
@@ -90,6 +111,11 @@ namespace BackEnd.Controllers
         }
 
         // Delet api/evento
+        /// <summary>
+        /// Deleta um objeto pelo id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Objeto deletado</returns>
         [HttpDelete("{id}")]
         public async Task<ActionResult<Evento>> Delete(int id) {
 

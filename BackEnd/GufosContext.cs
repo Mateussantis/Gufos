@@ -26,8 +26,7 @@ namespace BackEnd
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=KAGAMI; Database=Gufos; User=Mateussantis; Password=mateus000");
+                optionsBuilder.UseSqlServer("Server=N-1S-DEV-07\\SQLEXPRESS; Database=Gufos; User=sa; Password=132");
             }
         }
 
