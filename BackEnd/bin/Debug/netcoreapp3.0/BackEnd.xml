@@ -4,6 +4,28 @@
         <name>BackEnd</name>
     </assembly>
     <members>
+        <member name="M:BackEnd.Controllers.CategoriaController.Get">
+            <summary>
+             Retorna a lista de Categorias
+            </summary>
+            <returns>Lista de obj</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.CategoriaController.Get(System.Int32)">
+            <summary>
+            retorna o objeto pesquisado pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Objeto especifico</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:BackEnd.Controllers.CategoriaController.Post(BackEnd.Categoria)" -->
+        <member name="M:BackEnd.Controllers.CategoriaController.Put(System.Int32,BackEnd.Categoria)">
+            <summary>
+            Atualiza objeto pelo id
+            </summary>
+            <param name="id"></param>
+            <param name="categoria"></param>
+            <returns>Categoria atualizada</returns>
+        </member>
         <member name="M:BackEnd.Controllers.EventoController.Get">
             <summary>
             Listar todos os eventos
