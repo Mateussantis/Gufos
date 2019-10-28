@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace BackEnd.Models
+namespace BackEnd.Domains
 {
     public partial class GufosContext : DbContext
     {
@@ -26,7 +26,8 @@ namespace BackEnd.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=N-1S-DEV-07\\SQLEXPRESS; Database=Gufos; User Id=sa; Password=132");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Server=N-1S-DEV-07\\SQLEXPRESS;Database=Gufos;User Id=sa; Password=132;");
             }
         }
 

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BackEnd.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using BackEnd.Domains;
 
 // Para adicionar a arvore de objetos adicionamos uma nova biblioteca Json
 // dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson

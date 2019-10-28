@@ -17,7 +17,13 @@
             <param name="id"></param>
             <returns>Objeto especifico</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:BackEnd.Controllers.CategoriaController.Post(BackEnd.Categoria)" -->
+        <member name="M:BackEnd.Controllers.CategoriaController.Post(BackEnd.Categoria)">
+            <summary>
+            Cria uma Categoria
+            </summary>
+            <param name="categoria"></param>
+            <returns>Categoria especifica pelo id</returns>
+        </member>
         <member name="M:BackEnd.Controllers.CategoriaController.Put(System.Int32,BackEnd.Categoria)">
             <summary>
             Atualiza objeto pelo id

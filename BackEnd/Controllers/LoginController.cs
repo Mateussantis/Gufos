@@ -3,7 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using BackEnd.Models;
+using BackEnd.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -23,20 +23,21 @@ namespace BackEnd.Controllers
 
         // Definimos m metodo construtor para poder acessar estas configs
 
-        public LoginController(IConfiguration _config) {
-            this._config = _config;
+        public LoginController(IConfiguration config) {
+            _config = config;
         }
 
         // Chamamos nosso metodo para validar o usuario na aplicação
-        private Usuario ValidaUsuario(Usuario login) {
+        private Usuario ValidaUsuario(LoginViewModel login) {
 
             var usuario = _context.Usuario.FirstOrDefault(
                 u => u.Email == login.Email && u.Senha == login.Senha
             );
 
-            if(usuario != null) {
-                usuario = login;
-            }
+            // if(usuario != null) {
+            //     usuario = login;
+            // }
+
             return usuario;
         }
 
@@ -69,7 +70,7 @@ namespace BackEnd.Controllers
         // Usamos essa anotação para ignorar a autenticação nesse metodo
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult  Login([FromBody]Usuario login) {
+        public IActionResult  Login([FromBody]LoginViewModel login) {
 
             IActionResult response = Unauthorized();
 
