@@ -34,38 +34,115 @@
         </member>
         <member name="M:BackEnd.Controllers.EventoController.Get">
             <summary>
-            Listar todos os eventos
+             Retorna a lista de Eventos
             </summary>
-            <returns>Os objetos</returns>
+            <returns>Lista de obj</returns>
         </member>
         <member name="M:BackEnd.Controllers.EventoController.Get(System.Int32)">
             <summary>
-            Mostra um objeto selecionado pelo id
+            retorna o objeto pesquisado pelo id
             </summary>
             <param name="id"></param>
-            <returns>Objeto</returns>
+            <returns>Objeto especifico</returns>
         </member>
         <member name="M:BackEnd.Controllers.EventoController.Post(BackEnd.Evento)">
             <summary>
-            Cria um novo evetno/
+            Cria uma Evento
             </summary>
             <param name="evento"></param>
-            <returns>Objeto criado</returns>
+            <returns>Evento especifica pelo id</returns>
         </member>
         <member name="M:BackEnd.Controllers.EventoController.Put(System.Int32,BackEnd.Evento)">
             <summary>
-            Atualiza um evento
+            Atualiza objeto pelo id
             </summary>
             <param name="id"></param>
             <param name="evento"></param>
-            <returns>Nada</returns>
+            <returns>Evento atualizada</returns>
         </member>
-        <member name="M:BackEnd.Controllers.EventoController.Delete(System.Int32)">
+        <member name="M:BackEnd.Controllers.LocalizacaoController.Get">
             <summary>
-            Deleta um objeto pelo id
+             Retorna a lista de Localizacaos
+            </summary>
+            <returns>Lista de obj</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.LocalizacaoController.Get(System.Int32)">
+            <summary>
+            retorna o objeto pesquisado pelo id
             </summary>
             <param name="id"></param>
-            <returns>Objeto deletado</returns>
+            <returns>Objeto especifico</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.LocalizacaoController.Post(BackEnd.Localizacao)">
+            <summary>
+            Cria uma Localizacao
+            </summary>
+            <param name="localizacao"></param>
+            <returns>Localizacao especifica pelo id</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.LocalizacaoController.Put(System.Int32,BackEnd.Localizacao)">
+            <summary>
+            Atualiza objeto pelo id
+            </summary>
+            <param name="id"></param>
+            <param name="localizacao"></param>
+            <returns>Localizacao atualizada</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.PresencaController.Get">
+            <summary>
+             Retorna a lista de Presencas
+            </summary>
+            <returns>Lista de obj</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.PresencaController.Get(System.Int32)">
+            <summary>
+            retorna o objeto pesquisado pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Objeto especifico</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.PresencaController.Post(BackEnd.Presenca)">
+            <summary>
+            Cria uma Presenca
+            </summary>
+            <param name="presenca"></param>
+            <returns>Presenca especifica pelo id</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.PresencaController.Put(System.Int32,BackEnd.Presenca)">
+            <summary>
+            Atualiza objeto pelo id
+            </summary>
+            <param name="id"></param>
+            <param name="presenca"></param>
+            <returns>Presenca atualizada</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.UsuarioController.Get">
+            <summary>
+             Retorna a lista de Usuarios
+            </summary>
+            <returns>Lista de obj</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.UsuarioController.Get(System.Int32)">
+            <summary>
+            retorna o objeto pesquisado pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Objeto especifico</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.UsuarioController.Post(BackEnd.Usuario)">
+            <summary>
+            Cria uma Usuario
+            </summary>
+            <param name="usuario"></param>
+            <returns>Usuario especifica pelo id</returns>
+        </member>
+        <member name="M:BackEnd.Controllers.UsuarioController.Put(System.Int32,BackEnd.Usuario)">
+            <summary>
+            Atualiza objeto pelo id
+            </summary>
+            <param name="id"></param>
+            <param name="usuario"></param>
+            <returns>Usuario atualizada</returns>
         </member>
     </members>
 </doc>

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BackEnd.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,42 +16,54 @@ namespace BackEnd.Controllers
     public class PresencaController : ControllerBase
     {
         
-        GufosContext _contexto = new GufosContext();
+        // GufosContext _contexto = new GufosContext();
+        PresencaRepository _repositorio = new PresencaRepository();
 
         // GET: api/Presenca
+        /// <summary>
+        ///  Retorna a lista de Presencas
+        /// </summary>
+        /// <returns>Lista de obj</returns>
         [HttpGet]
         public async Task<ActionResult<List<Presenca>>> Get(){
-            // Include - Adiciona a arvore de objetos relacionados
-            var presencas = await _contexto.Presenca.ToListAsync();
+            // ToListAsync (Select * from Presenca)
+            var Presencas = await _repositorio.Listar();
             
-            if(presencas == null) {
+            if(Presencas == null) {
                 return NotFound();
             }
-            return presencas;
+            return Presencas;
         }
 
         // GET: api/Presenca2
+        /// <summary>
+        /// retorna o objeto pesquisado pelo id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Objeto especifico</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Presenca>> Get(int id){
 
             // FindAsync (Select * from Presenca where id = id)
-            var presenca = await _contexto.Presenca.Include("Evento").Include("Usuario").FirstOrDefaultAsync(e => e.PresencaId == id);
+            var Presenca = await _repositorio.BuscarPorID(id);
             
-            if(presenca == null) {
+            if(Presenca == null) {
                 return NotFound();
             }
-            return presenca;
+            return Presenca;
         }
 
         // Post api/presenca
+        /// <summary>
+        /// Cria uma Presenca
+        /// </summary>
+        /// <param name="presenca"></param>
+        /// <returns>Presenca especifica pelo id</returns>
         [HttpPost]
         public async Task<ActionResult<Presenca>> Post(Presenca presenca) {
 
             try {   
-                // Tratamos contra ataques de SQL INJECTION
-                await _contexto.AddAsync(presenca);
-                // Salvamos efetivamento o nosso objeto
-                await _contexto.SaveChangesAsync();
+                await _repositorio.Salvar(presenca);
             }
             catch(DbUpdateConcurrencyException) {
                 throw;
@@ -59,6 +72,12 @@ namespace BackEnd.Controllers
         }
 
         // Put api/presenca
+        /// <summary>
+        /// Atualiza objeto pelo id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="presenca"></param>
+        /// <returns>Presenca atualizada</returns>
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, Presenca presenca){
 
@@ -66,15 +85,12 @@ namespace BackEnd.Controllers
                 return BadRequest();
             }
 
-            // Comparamos os atributos que foram modificados atraves do EntityFrameWork
-            _contexto.Entry(presenca).State = EntityState.Modified;
-
             try {
-                await _contexto.SaveChangesAsync();
+                await _repositorio.Alterar(presenca);
             }
             catch (DbUpdateConcurrencyException) {
                 
-                var presenca_valido = await _contexto.Presenca.FindAsync(id);
+                var presenca_valido = await _repositorio.BuscarPorID(id);
 
                 // Verificamos se o objeto inserido realmente existe no banco
                 if(presenca_valido == null) {
@@ -92,13 +108,13 @@ namespace BackEnd.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Presenca>> Delete(int id) {
 
-            var  presenca = await _contexto.Presenca.FindAsync(id);
+            var  presenca = await _repositorio.BuscarPorID(id);
             if(presenca == null) {
                 return NotFound();
             }
 
-            _contexto.Presenca.Remove(presenca);
-            await _contexto.SaveChangesAsync();
+            await _repositorio.Excluir(presenca);
+
             return presenca;
         }
     }
